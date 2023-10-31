@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mesaj Kutusu</title>
+
+    <!--<script src="https://code.jquery.com/jquery-3.7.1.js"></script>-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js"
+        integrity="sha512-+k1pnlgt4F1H8L7t3z95o3/KO+o78INEcXTbnoJQ/F2VqDVhWoaiVml/OEHv9HsVgxUaVW+IbiZPUJQfF/YxZw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src='https://kit.fontawesome.com/a0231a7bb6.js' crossorigin='anonymous'></script>
+
+
+    <style>
+        #message-box {
+            background-color: rgb(46, 148, 109);
+            color: aliceblue;
+            text-align: center;
+            width: 300px;
+            font-size: 20px;
+            float: right;
+            border-radius: 10px;
+            box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1),
+                0 0 0 2px rgb(255, 255, 255),
+                0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+        }
+        #baslik {
+            cursor: pointer;
+            height: 20px;
+            padding: 10px;
+        }
+        #close {
+            float: right;
+            padding-right: 10px;
+        }
+        #close:hover {
+            color: skyblue;
+        }
+        #icerik {
+            height: 580px;
+            padding: 10px;
+            background-color: rgb(32, 124, 87);
+            display: none;
+        }#icon{
+            margin-left: 5px;
+            font-size: 20px;
+            top: 17px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="message-box">
+
+        <div id="baslik">
+
+            <span id="mesaj">Mesajlar<i id ="icon" class="fa fa-envelope" aria-hidden="true"></i></span><span id="close">X</span> 
+           
+
+        </div>
+        <div id="icerik">
+
+        </div>
+
+    </div>
+
+    <script>
+        $(document).ready(function () {
+           
+
+            $("#mesaj").click(function () {
+                $("#icerik").show("slow");
+            });
+
+            $("#close").click(function () {
+                $("#icerik").hide(2000);
+            })
+        })
+    </script>
+
+
+    <script>
+
+
+
+    </script>
+
+</body>
+
+</html>
